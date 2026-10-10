@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Finnish Company Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header> 
+<h1>
+<a href="index.html">Finnish Company Finder</a>
+</h1>
+</header>
+<main>
+    <h2>Search Finnish Companies</h2>
+    <p>Find registered Finnish companies using one or more search criteria.</p>
+	<section class="search-box">
+		<h3>Search Criteria</h3>
+
+<form action="results.html" method="get">
+
+				
+
+    <div class="search-grid">
+
+        <!-- City -->
+        <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" name="city">
+                <option value="">Select city</option>
+                <option value="lahti">Lahti</option>
+                <option value="helsinki">Helsinki</option>
+                <option value="espoo">Espoo</option>
+            </select>
+        </div>
+
+        <!-- Business Line -->
+        <div class="form-group">
+            <label for="industry">Business Line</label>
+            <select id="industry" name="industry">
+                <option value="">Select industry</option>
+                <option value="accounting">Accounting</option>
+                <option value="software">Software</option>
+                <option value="retail">Retail</option>
+            </select>
+        </div>
+
+        <!-- Results per Page -->
+        <div class="form-group">
+            <label for="results">Results per Page</label>
+            <select id="results" name="results">
+                <option value="10">10 results</option>
+                <option value="20">20 results</option>
+                <option value="50">50 results</option>
+            </select>
+        </div>
+
+        <!-- Registration Date From -->
+        <div class="form-group">
+            <label for="date-from">Registration Date From</label>
+            <input type="date" id="date-from" name="date-from">
+        </div>
+
+        <!-- Registration Date To -->
+        <div class="form-group">
+            <label for="date-to">Registration Date To</label>
+            <input type="date" id="date-to" name="date-to">
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button type="reset" class="clear-button">
+                Clear Filters
+            </button>
+
+            <button type="submit" class="search-button">
+                Search Companies
+            </button>
+        </div>
+
+    </div>
+
+    <p class="search-hint">Select at least one search criterion.</p>
+
+</form>
+</section>
+	
+				<!-- SEARCH RESULTS SECTION -->
+
+				<section class="results-section">
+
+					<div class="results-heading">
+						<h2>Search Results</h2>
+						 <span class="results-count"> Perform a search to see results </span>
+					</div>
+					
+					<div class="results-box">
+						<!-- COMPANY RESULTS TABLE -->
+
+						<table class="company-table">
+
+						<thead>
+							<tr>
+								<th>Company Name</th>
+								<th>Business ID</th>
+								<th>Registration Date</th>
+								<th>Business Line</th>
+								<th>City</th>
+								<th>Contact Phone</th>
+								<th>Contact Email</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						</tbody>
+
+						</table>
+
+					</div>
+								<p class="demo-link">
+								Demo: <a href="NoResults.html">View No Results Example</a>
+								</p>
+				</section>
+				
+</main>
+
+
+
+
+
+
+
+
+</body>
+</html>
