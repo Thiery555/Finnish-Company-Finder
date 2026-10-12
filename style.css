@@ -254,3 +254,130 @@ header h1 a {
     color: #2078fa;
     text-decoration: underline;
 }
+
+/* RESPONSIVE DESIGN FOR TABLETS AND MOBILE PHONES */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 20px 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    /* Main content */
+    main {
+        padding: 28px 15px;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    /* Search container */
+    .search-box {
+        padding: 22px 18px;
+        margin-top: 20px;
+    }
+
+    .search-box h3 {
+        font-size: 24px;
+    }
+
+    /* Change three columns into one */
+    .search-grid {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+
+    /* Form inputs */
+    .form-group select,
+    .form-group input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    /* Buttons */
+    .button-group {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .clear-button,
+    .search-button {
+        height: 52px;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* Results heading */
+    .results-section {
+        margin-top: 35px;
+    }
+
+    .results-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .results-heading h2 {
+        font-size: 24px;
+    }
+
+    /* Results container */
+    .results-box {
+        padding: 12px;
+        min-height: 250px;
+        overflow-x: auto;
+    }
+
+    /* Allow wide table to scroll horizontally */
+    .company-table {
+        min-width: 850px;
+    }
+
+    /* No results message */
+    .no-results {
+        padding: 55px 12px 35px;
+    }
+
+    .no-results h3 {
+        font-size: 21px;
+    }
+
+    .no-results p {
+        font-size: 16px;
+    }
+}
+
+/* THIS IS FOR MOBILE PHONE RESPONSIVENESS AS MENTIONED BY TEAM 8 */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .search-box {
+        padding: 18px 14px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .clear-button,
+    .search-button {
+        width: 100%;
+        flex: none;
+    }
+}
