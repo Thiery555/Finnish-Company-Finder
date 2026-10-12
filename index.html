@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!-- Page setup is made up of UTF-8 which supports text characters, viewport helps
+     the layout adjust to mobile screens (mobile responsivenes), and style.css handles
+     the visual design of the page. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +10,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- Website header: I used an anchor link inside the heading
+     so users can return to the main search page from other pages. -->
 <header> 
 <h1>
 <a href="index.html">Finnish Company Finder</a>
 </h1>
 </header>
+	<!-- Main section contains the search form and the results area.
+     i grouped them separately to make styling easier. -->
 <main>
     <h2>Search Finnish Companies</h2>
     <p>Find registered Finnish companies using one or more search criteria.</p>
 	<section class="search-box">
 		<h3>Search Criteria</h3>
-
+<!-- The form collects the selected search criteria.
+     Since this iteration we are allowed to use only HTML and CSS, submitting
+     the form opens a separate page with sample results. -->
 <form action="Results.html" method="get">
 
 				
-
+<!-- Search fields are grouped inside one container.
+     The search-grid class uses CSS Grid to arrange the fields
+     in columns on desktop and one column on mobile. i initially used flexbox here but the outcome did not match the prototype so i then used the search-grid -->
     <div class="search-grid">
-
-        <!-- City -->
+<!-- Dropdown menus use select and option elements to provide
+     choices options. the Date fields use input type="date"
+     so users can choose registration dates and so on. -->
+        <!-- City Field-->
         <div class="form-group">
             <label for="city">City</label>
             <select id="city" name="city">
@@ -35,7 +48,7 @@
             </select>
         </div>
 
-        <!-- Business Line -->
+        <!-- Business Line Field -->
         <div class="form-group">
             <label for="industry">Business Line</label>
             <select id="industry" name="industry">
@@ -68,7 +81,9 @@
             <input type="date" id="date-to" name="date-to">
         </div>
 
-        <!-- Buttons -->
+       <!-- The reset button clears the selected form values (filter function as require by team 8).
+     The submit button opens the static Results.html page.
+     Both actions use built-in HTML form behaviour. -->
         <div class="button-group">
             <button type="reset" class="clear-button">
                 Clear Filters
@@ -87,6 +102,8 @@
 </section>
 	
 				<!-- SEARCH RESULTS SECTION -->
+	<!-- Initial search state: before searching, the results area
+     displays an instruction instead of company records. -->
 
 				<section class="results-section">
 
@@ -97,6 +114,9 @@
 					
 					<div class="results-box">
 						<!-- COMPANY RESULTS TABLE -->
+						<!-- The table keeps the same seven company information columns
+     across the application. Its body is empty on this page
+     because no search has been performed yet. -->
 
 						<table class="company-table">
 
@@ -118,12 +138,17 @@
 						</table>
 
 					</div>
+					<!-- This demo link opens the no-results page separately.
+     Without JavaScript or a backend, although at this stage the form cannot check
+     whether a search should return records or no matches i was looking for an easy means to show some user feedback. -->
 								<p class="demo-link">
 								Demo: <a href="NoResults.html">View No Results Example</a>
 								</p>
 				</section>
 				
 </main>
+</body>
+</html>
 
 
 
